@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { MapPin, Phone, Mail, Clock, Sprout } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -8,7 +9,9 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <span className="text-2xl">🌿</span>
+              <div className="w-8 h-8 bg-forest-600 rounded-lg flex items-center justify-center">
+                <Sprout className="w-5 h-5 text-white" />
+              </div>
               <span className="font-display font-bold text-xl">RR Nursery</span>
             </div>
             <p className="text-forest-300 text-sm leading-relaxed">
@@ -41,25 +44,25 @@ export default function Footer() {
           {/* Contact */}
           <div>
             <h3 className="font-semibold text-forest-200 mb-4 uppercase tracking-wide text-xs">Contact Us</h3>
-            <ul className="space-y-2 text-sm text-forest-300">
-              <li className="flex items-start gap-2">
-                <span>📍</span>
+            <ul className="space-y-3 text-sm text-forest-300">
+              <li className="flex items-start gap-2.5">
+                <MapPin className="w-4 h-4 mt-0.5 shrink-0 text-forest-400" />
                 <span>123 Garden Lane, Green Valley, CA 90210</span>
               </li>
-              <li className="flex items-center gap-2">
-                <span>📞</span>
+              <li className="flex items-center gap-2.5">
+                <Phone className="w-4 h-4 shrink-0 text-forest-400" />
                 <a href="tel:+11234567890" className="hover:text-white transition-colors">
                   (123) 456-7890
                 </a>
               </li>
-              <li className="flex items-center gap-2">
-                <span>✉️</span>
+              <li className="flex items-center gap-2.5">
+                <Mail className="w-4 h-4 shrink-0 text-forest-400" />
                 <a href="mailto:info@rrnursery.com" className="hover:text-white transition-colors">
                   info@rrnursery.com
                 </a>
               </li>
-              <li className="flex items-center gap-2">
-                <span>🕐</span>
+              <li className="flex items-center gap-2.5">
+                <Clock className="w-4 h-4 shrink-0 text-forest-400" />
                 <span>Mon–Sat: 8 AM – 6 PM</span>
               </li>
             </ul>

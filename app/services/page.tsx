@@ -1,11 +1,26 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { Shovel, Store, Check } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Our Services | RR Nursery",
   description:
     "RR Nursery offers professional landscape designing & architecture and a full-service nursery plant shop. Explore our two specialisations.",
 };
+
+const landscapePoints = [
+  "Custom landscape plans",
+  "2D & 3D design rendering",
+  "Hardscaping & water features",
+  "Project management end-to-end",
+];
+
+const nurseryPoints = [
+  "500+ plant varieties in stock",
+  "Indoor & outdoor plants",
+  "Organic fertilisers & soil",
+  "Local delivery available",
+];
 
 export default function ServicesHubPage() {
   return (
@@ -32,7 +47,9 @@ export default function ServicesHubPage() {
             href="/services/landscape-design"
             className="group relative overflow-hidden bg-forest-800 text-white rounded-3xl p-10 flex flex-col hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
           >
-            <span className="text-6xl mb-6 block">🏡</span>
+            <div className="w-14 h-14 bg-forest-700 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-forest-600 transition-colors">
+              <Shovel className="w-7 h-7 text-white" />
+            </div>
             <h2 className="text-2xl md:text-3xl font-display font-bold mb-3">
               Landscape Designing &amp; Architecture
             </h2>
@@ -40,14 +57,10 @@ export default function ServicesHubPage() {
               Custom garden blueprints, site analysis, 2D/3D plans, hardscaping, and full project management — turning your outdoor space into a masterpiece.
             </p>
             <ul className="space-y-2 text-sm text-forest-300 mb-8">
-              {[
-                "Custom landscape plans",
-                "2D & 3D design rendering",
-                "Hardscaping & water features",
-                "Project management end-to-end",
-              ].map((pt) => (
+              {landscapePoints.map((pt) => (
                 <li key={pt} className="flex items-center gap-2">
-                  <span className="text-forest-400">✓</span> {pt}
+                  <Check className="w-4 h-4 text-forest-400 shrink-0" />
+                  {pt}
                 </li>
               ))}
             </ul>
@@ -62,7 +75,9 @@ export default function ServicesHubPage() {
             href="/services/nursery"
             className="group relative overflow-hidden bg-earth-600 text-white rounded-3xl p-10 flex flex-col hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
           >
-            <span className="text-6xl mb-6 block">🌱</span>
+            <div className="w-14 h-14 bg-earth-700 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-earth-800 transition-colors">
+              <Store className="w-7 h-7 text-white" />
+            </div>
             <h2 className="text-2xl md:text-3xl font-display font-bold mb-3">
               Nursery Farm &amp; Plant Shop
             </h2>
@@ -70,14 +85,10 @@ export default function ServicesHubPage() {
               Visit our nursery farm and offline plant shop for 500+ varieties of indoor and outdoor plants, expert advice, and same-day local delivery.
             </p>
             <ul className="space-y-2 text-sm text-earth-200 mb-8">
-              {[
-                "500+ plant varieties in stock",
-                "Indoor & outdoor plants",
-                "Organic fertilisers & soil",
-                "Local delivery available",
-              ].map((pt) => (
+              {nurseryPoints.map((pt) => (
                 <li key={pt} className="flex items-center gap-2">
-                  <span className="text-earth-300">✓</span> {pt}
+                  <Check className="w-4 h-4 text-earth-300 shrink-0" />
+                  {pt}
                 </li>
               ))}
             </ul>
@@ -99,7 +110,7 @@ export default function ServicesHubPage() {
             Our team is happy to guide you. Book a free no-obligation consultation today.
           </p>
           <Link href="/contact" className="btn-primary px-8 py-4 text-base">
-            Get a Free Quote →
+            Get a Free Quote
           </Link>
         </div>
       </section>
