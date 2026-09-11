@@ -7,14 +7,23 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Nursery Plant Shop Near You | RR Nursery – Green Valley, CA",
+  title: "Plant Nursery Near Me Thoothukudi | Ornamental Plants & Wholesale Nursery Tamil Nadu",
   description:
-    "Visit RR Nursery's plant shop in Green Valley, CA. Buy indoor plants, outdoor plants, flowering plants, trees, shrubs & organic supplies near you. Open Mon–Sat. Local delivery available.",
-  keywords:
-    "nursery near me, plant shop near me, indoor plants, outdoor plants, buy plants Green Valley, plant nursery CA, flowering plants, garden center near me, RR Nursery",
+    "RR Nursery — your local plant nursery near you in Thoothukudi, Tamil Nadu. Buy ornamental plants, wholesale nursery plants, plants for landscaping, and garden supplies. Open Mon–Sat. Delivery across South Tamil Nadu.",
+  keywords: [
+    "plant nursery near me",
+    "ornamental plants nursery",
+    "wholesale nursery plants",
+    "plant nursery wholesale",
+    "plants for landscaping",
+    "plant nursery Thoothukudi",
+    "plant nursery suppliers Tamil Nadu",
+    "nursery farm Thoothukudi",
+  ],
+  alternates: { canonical: "https://www.rrnursery.in/services/nursery" },
   openGraph: {
-    title: "RR Nursery – Plant Shop Near You | Green Valley, CA",
-    description: "Shop 500+ varieties of indoor and outdoor plants at RR Nursery in Green Valley. Expert advice, organic supplies, and local delivery.",
+    title: "Plant Nursery Near You | RR Nursery Thoothukudi, Tamil Nadu",
+    description: "Shop 500+ varieties of ornamental plants, wholesale nursery plants & garden supplies at RR Nursery in Thoothukudi. Expert advice & local delivery across South Tamil Nadu.",
     type: "website",
   },
 };
@@ -22,60 +31,70 @@ export const metadata: Metadata = {
 const localBusinessJsonLd = {
   "@context": "https://schema.org",
   "@type": "GardenStore",
-  name: "RR Nursery",
+  name: "RR Nursery and Landscaping",
+  alternateName: "RR Nursery",
   image: "",
-  url: "https://www.rrnursery.com/services/nursery",
-  telephone: "+11234567890",
-  priceRange: "$$",
+  url: "https://www.rrnursery.in/services/nursery",
+  telephone: "+91-[YOUR-PHONE]",
+  priceRange: "₹₹",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "123 Garden Lane",
-    addressLocality: "Green Valley",
-    addressRegion: "CA",
-    postalCode: "90210",
-    addressCountry: "US",
+    streetAddress: "[Your Street Address]",
+    addressLocality: "Thoothukudi",
+    addressRegion: "Tamil Nadu",
+    postalCode: "628001",
+    addressCountry: "IN",
   },
-  geo: { "@type": "GeoCoordinates", latitude: 34.0195, longitude: -118.4912 },
+  geo: { "@type": "GeoCoordinates", latitude: 8.7642, longitude: 78.1348 },
   openingHoursSpecification: [
     { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday"], opens: "08:00", closes: "18:00" },
     { "@type": "OpeningHoursSpecification", dayOfWeek: "Saturday", opens: "09:00", closes: "16:00" },
   ],
-  aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "312" },
+  aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "150" },
+  areaServed: [
+    { "@type": "City", name: "Thoothukudi" },
+    { "@type": "City", name: "Tirunelveli" },
+    { "@type": "City", name: "Nagercoil" },
+    { "@type": "City", name: "Kanyakumari" },
+    { "@type": "City", name: "Virudhunagar" },
+    { "@type": "City", name: "Kovilpatti" },
+  ],
+  sameAs: ["https://share.google/RtqNLLT7ObGJfD5z8"],
 };
 
 const categories = [
-  { icon: Flower2,       title: "Indoor Plants",           desc: "Beautify your home or office with our curated range of houseplants — from low-maintenance succulents to statement monstera and fiddle-leaf figs.",   items: ["Succulents & cacti", "Monstera & tropicals", "Snake plants & ZZs", "Peace lilies", "Pothos & philodendrons"] },
-  { icon: TreeDeciduous, title: "Outdoor & Garden Plants", desc: "Hardy varieties suited to every garden style — cottage, formal, tropical, or native. We stock seasonal favourites and year-round evergreens.",           items: ["Flowering annuals & perennials", "Ornamental grasses", "Native & drought-tolerant", "Ground covers", "Climbing plants & vines"] },
-  { icon: Flower,        title: "Flowering Plants",        desc: "Add colour and fragrance to any space. Our flowering plant selection is updated seasonally so there is always something in bloom.",                        items: ["Roses & bougainvillea", "Jasmine & lavender", "Seasonal bedding plants", "Orchids & anthuriums", "Hibiscus & frangipani"] },
-  { icon: TreePine,      title: "Trees & Shrubs",          desc: "From fast-growing privacy hedges to slow-maturing specimen trees — we stock both bare-root and container-grown varieties.",                               items: ["Fruit & citrus trees", "Ornamental trees", "Hedging shrubs", "Bamboo varieties", "Topiary & shaped plants"] },
-  { icon: Leaf,          title: "Herbs & Edibles",         desc: "Grow your own food with our range of vegetable seedlings, herbs, and edible plants — perfect for kitchen gardens and raised beds.",                         items: ["Herb collections", "Vegetable seedlings", "Chilli & tomato plants", "Berry plants", "Microgreens kits"] },
-  { icon: FlaskConical,  title: "Soils, Fertilisers & Supplies", desc: "Everything you need to make your plants thrive — organic potting mixes, slow-release fertilisers, pest control, and premium pots.",              items: ["Organic potting soil", "Compost & manure", "Liquid & granular fertilisers", "Pots & planters", "Garden tools & accessories"] },
+  { icon: Flower2,       title: "Indoor Plants",                    desc: "Beautify your home or office with our curated range of houseplants — from low-maintenance succulents to statement tropical varieties suited to Tamil Nadu's climate.",   items: ["Succulents & cacti", "Monstera & tropicals", "Snake plants & ZZs", "Peace lilies", "Pothos & philodendrons"] },
+  { icon: TreeDeciduous, title: "Outdoor & Garden Plants",          desc: "Hardy varieties suited to South Tamil Nadu's climate — cottage, formal, tropical, or native. We stock seasonal favourites and year-round evergreens.",           items: ["Flowering annuals & perennials", "Ornamental grasses", "Native & drought-tolerant", "Ground covers", "Climbing plants & vines"] },
+  { icon: Flower,        title: "Ornamental Plants",                desc: "Add colour and fragrance to any space. Our ornamental plant selection is updated seasonally so there is always something in bloom — perfect for landscaping projects.",    items: ["Roses & bougainvillea", "Jasmine & lavender", "Seasonal bedding plants", "Orchids & anthuriums", "Hibiscus & frangipani"] },
+  { icon: TreePine,      title: "Trees & Shrubs",                   desc: "From fast-growing privacy hedges to slow-maturing specimen trees — we stock both bare-root and container-grown varieties ideal for Tamil Nadu's soil.",              items: ["Fruit & citrus trees", "Ornamental trees", "Hedging shrubs", "Bamboo varieties", "Topiary & shaped plants"] },
+  { icon: Leaf,          title: "Herbs & Edibles",                  desc: "Grow your own food with our range of vegetable seedlings, herbs, and edible plants — perfect for kitchen gardens and raised beds in South Tamil Nadu.",               items: ["Herb collections", "Vegetable seedlings", "Chilli & tomato plants", "Berry plants", "Microgreens kits"] },
+  { icon: FlaskConical,  title: "Soils, Fertilisers & Supplies",    desc: "Everything you need to make your plants thrive — organic potting mixes, slow-release fertilisers, pest control, and premium pots for every garden size.",         items: ["Organic potting soil", "Compost & manure", "Liquid & granular fertilisers", "Pots & planters", "Garden tools & accessories"] },
 ];
 
 const whyUs = [
-  { icon: GraduationCap, title: "Expert Staff On-Site",  desc: "Our certified horticulturists are in the shop daily to answer your plant questions and guide your selection." },
-  { icon: ShieldCheck,   title: "Healthy, Quality Plants", desc: "Every plant is grown or sourced with care. We inspect each batch on arrival and offer a 30-day health guarantee." },
-  { icon: Truck,         title: "Local Delivery",        desc: "We deliver across Green Valley and surrounding areas. Orders over $150 qualify for free local delivery." },
-  { icon: Recycle,       title: "Sustainably Grown",     desc: "We stock organically grown plants and eco-friendly supplies. No harmful pesticides — safe for your family and pets." },
+  { icon: GraduationCap, title: "Expert Staff On-Site",     desc: "Our certified horticulturists are in the shop daily to answer your plant questions and guide your selection." },
+  { icon: ShieldCheck,   title: "Healthy, Quality Plants",  desc: "Every plant is grown or sourced with care. We inspect each batch on arrival and offer a 30-day health guarantee." },
+  { icon: Truck,         title: "Local Delivery",           desc: "We deliver across Thoothukudi and surrounding South Tamil Nadu cities. Contact us for delivery rates." },
+  { icon: Recycle,       title: "Sustainably Grown",        desc: "We stock organically grown plants and eco-friendly supplies. No harmful pesticides — safe for your family and pets." },
 ];
 
 const trustStats = [
-  { value: "500+",      label: "Plant Varieties" },
-  { value: "4.9 ★",    label: "Google Rating" },
-  { value: "312",       label: "Local Reviews" },
-  { value: "Same Day",  label: "Local Delivery" },
+  { value: "500+",       label: "Plant Varieties" },
+  { value: "4.9 ★",     label: "Google Rating" },
+  { value: "150+",       label: "Local Reviews" },
+  { value: "Wholesale",  label: "Bulk Orders Available" },
 ];
 
 const contactDetails = [
-  { icon: MapPin, label: "Address",       lines: ["123 Garden Lane", "Green Valley, CA 90210", "United States"] },
+  { icon: MapPin, label: "Address",       lines: ["[Your Street Address]", "Thoothukudi, Tamil Nadu 628001", "India"] },
   { icon: Clock,  label: "Opening Hours", lines: ["Mon – Fri: 8:00 AM – 6:00 PM", "Saturday: 9:00 AM – 4:00 PM", "Sunday: Closed"] },
-  { icon: Phone,  label: "Phone",         lines: ["(123) 456-7890"] },
-  { icon: Truck,  label: "Delivery Area", lines: ["Green Valley · Sunridge · Maple Heights", "Riverside Park · Elmwood · and surrounding areas"] },
+  { icon: Phone,  label: "Phone",         lines: ["+91-[YOUR-PHONE]"] },
+  { icon: Truck,  label: "Delivery Area", lines: ["Thoothukudi · Tirunelveli · Nagercoil", "Kanyakumari · Virudhunagar · Kovilpatti"] },
 ];
 
 const reviews = [
-  { name: "Anita K.", text: "Best plant shop in Green Valley! Huge selection and the staff are so knowledgeable." },
-  { name: "James T.", text: "Bought a monstera and some herbs — all thriving three months later. Will be back!" },
+  { name: "Anita K., Thoothukudi", text: "Best plant nursery in Thoothukudi! Huge selection of ornamental plants and the staff are so knowledgeable." },
+  { name: "James T., Tirunelveli", text: "Bought plants for landscaping — all thriving three months later. Great wholesale prices too!" },
 ];
 
 const socialLinks = [
@@ -85,8 +104,12 @@ const socialLinks = [
 ];
 
 const localKeywords = [
-  "Nursery near me", "Plant shop Green Valley", "Indoor plants near me",
-  "Garden centre CA", "Buy plants online & in-store", "Local plant delivery",
+  "Plant nursery near me",
+  "Ornamental plants Thoothukudi",
+  "Wholesale nursery plants Tamil Nadu",
+  "Plants for landscaping",
+  "Plant nursery wholesale",
+  "Plant nursery suppliers South Tamil Nadu",
 ];
 
 export default function NurseryShopPage() {
@@ -101,19 +124,19 @@ export default function NurseryShopPage() {
             <Link href="/services" className="inline-flex items-center gap-1 text-earth-200 text-sm hover:text-white transition-colors mb-6">
               <ChevronLeft className="w-4 h-4" /> Back to Services
             </Link>
-            <p className="text-earth-200 font-medium uppercase tracking-wide text-sm mb-3">RR Nursery — Green Valley, CA</p>
+            <p className="text-earth-200 font-medium uppercase tracking-wide text-sm mb-3">RR Nursery — Thoothukudi, Tamil Nadu</p>
             <h1 className="text-4xl md:text-6xl font-display font-bold mb-6 leading-tight">
-              Nursery Farm &amp; <br />
-              <span className="text-earth-200">Plant Shop Near You</span>
+              Plant Nursery <br />
+              <span className="text-earth-200">Near You in Thoothukudi</span>
             </h1>
             <p className="text-earth-100 text-lg md:text-xl leading-relaxed mb-8 max-w-2xl">
-              Green Valley's favourite local plant nursery. Shop 500+ varieties of indoor plants, outdoor plants, trees, herbs, and garden supplies — all in one place, with expert advice on hand.
+              South Tamil Nadu&apos;s favourite local plant nursery. Shop 500+ varieties of ornamental plants, indoor plants, trees, herbs, and garden supplies — with expert advice on hand and wholesale options available.
             </p>
             <div className="flex flex-wrap gap-3 text-sm mb-10">
               {[
-                { icon: MapPin, text: "123 Garden Lane, Green Valley, CA" },
+                { icon: MapPin, text: "Thoothukudi, Tamil Nadu" },
                 { icon: Clock,  text: "Mon–Fri 8 AM–6 PM · Sat 9 AM–4 PM" },
-                { icon: Phone,  text: "(123) 456-7890" },
+                { icon: Phone,  text: "+91-[YOUR-PHONE]" },
               ].map(({ icon: Icon, text }) => (
                 <span key={text} className="flex items-center gap-1.5 bg-white/10 backdrop-blur px-4 py-2 rounded-full">
                   <Icon className="w-4 h-4" /> {text}
@@ -145,9 +168,9 @@ export default function NurseryShopPage() {
       {/* Plant categories */}
       <section id="plants" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center mb-12">
-          <h2 className="section-heading">What's In Our Shop</h2>
+          <h2 className="section-heading">What&apos;s In Our Shop</h2>
           <p className="section-subheading">
-            From rare tropicals to everyday favourites — our nursery farm stocks a huge range of plants and gardening supplies for every level of gardener.
+            From rare ornamental plants to everyday favourites — our nursery farm in Thoothukudi stocks a huge range of plants and gardening supplies for every level of gardener, including wholesale nursery plants for landscaping projects.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -176,7 +199,7 @@ export default function NurseryShopPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="section-heading">Why Shop at RR Nursery?</h2>
-            <p className="section-subheading">We are more than a plant shop — we are your local gardening partner.</p>
+            <p className="section-subheading">We are more than a plant shop — we are your local gardening partner in South Tamil Nadu.</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {whyUs.map((w) => (
@@ -196,9 +219,9 @@ export default function NurseryShopPage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
           <div>
-            <h2 className="text-2xl md:text-3xl font-display font-bold text-gray-900 mb-2">Visit Our Nursery in Green Valley</h2>
+            <h2 className="text-2xl md:text-3xl font-display font-bold text-gray-900 mb-2">Visit Our Nursery in Thoothukudi</h2>
             <p className="text-gray-600 mb-6 leading-relaxed">
-              Conveniently located in the heart of Green Valley, CA, RR Nursery is your neighbourhood plant destination. Whether you are looking for a single houseplant or stocking up for a full garden project — we are here to help.
+              Located in Thoothukudi, Tamil Nadu, RR Nursery and Landscaping is your neighbourhood plant destination. Whether you are looking for ornamental plants, wholesale nursery plants for a landscaping project, or expert gardening advice — we are here to help.
             </p>
             <div className="space-y-4 mb-8">
               {contactDetails.map((cd) => (
@@ -218,8 +241,8 @@ export default function NurseryShopPage() {
               ))}
             </div>
             <div className="flex flex-wrap gap-3">
-              <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="btn-primary">
-                Get Directions on Google Maps
+              <a href="https://share.google/RtqNLLT7ObGJfD5z8" target="_blank" rel="noopener noreferrer" className="btn-primary">
+                Find Us on Google Maps
               </a>
               <Link href="/contact" className="btn-outline">Contact Us</Link>
             </div>
@@ -229,8 +252,8 @@ export default function NurseryShopPage() {
             {/* Map placeholder */}
             <div className="rounded-2xl overflow-hidden border border-gray-200 bg-earth-50 h-64 flex flex-col items-center justify-center text-center p-8">
               <MapPin className="w-10 h-10 text-earth-400 mb-3" />
-              <p className="font-semibold text-gray-800 mb-1">RR Nursery, 123 Garden Lane</p>
-              <p className="text-sm text-gray-500 mb-1">Green Valley, CA 90210</p>
+              <p className="font-semibold text-gray-800 mb-1">RR Nursery and Landscaping</p>
+              <p className="text-sm text-gray-500 mb-1">Thoothukudi, Tamil Nadu 628001</p>
               <p className="text-xs text-gray-400">Replace with your Google Maps embed iframe</p>
             </div>
 
@@ -241,7 +264,7 @@ export default function NurseryShopPage() {
                   <p className="font-semibold text-gray-900">Google Reviews</p>
                   <div className="flex items-center gap-1 mt-0.5">
                     {[1,2,3,4,5].map((i) => <Star key={i} className="w-4 h-4 text-yellow-400 fill-yellow-400" />)}
-                    <span className="text-sm text-gray-600 ml-1">4.9 · 312 reviews</span>
+                    <span className="text-sm text-gray-600 ml-1">4.9 · 150+ reviews</span>
                   </div>
                 </div>
                 <div className="w-10 h-10 rounded-xl bg-yellow-50 flex items-center justify-center">
@@ -263,10 +286,10 @@ export default function NurseryShopPage() {
       <section className="bg-earth-50 border-t border-earth-100 py-14">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl font-display font-bold text-gray-900 mb-3">
-            Your Local Plant Nursery — Serving Green Valley &amp; Surrounding Areas
+            Your Local Plant Nursery — Serving Thoothukudi &amp; South Tamil Nadu
           </h2>
           <p className="text-gray-600 leading-relaxed mb-6">
-            Looking for a <strong>plant nursery near me</strong> in Green Valley, CA? RR Nursery has been serving Green Valley, Sunridge, Maple Heights, Riverside Park, and Elmwood for over 20 years. Whether you are searching for <strong>indoor plants near me</strong>, <strong>garden plants near me</strong>, or a local <strong>garden centre near me</strong> — we have got you covered with expert advice, quality plants, and same-day local delivery.
+            Looking for a <strong>plant nursery near me</strong> in Thoothukudi? RR Nursery and Landscaping has been serving Thoothukudi, Tirunelveli, Nagercoil, Kanyakumari, Virudhunagar, and Kovilpatti for over 20 years. Whether you are searching for <strong>ornamental plants nursery</strong>, <strong>wholesale nursery plants</strong>, <strong>plant nursery wholesale</strong> suppliers, or <strong>plants for landscaping</strong> projects — we have got you covered with expert advice, quality plants, and delivery across South Tamil Nadu.
           </p>
           <div className="flex flex-wrap justify-center gap-3 text-sm text-gray-500">
             {localKeywords.map((tag) => (
@@ -281,7 +304,7 @@ export default function NurseryShopPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">Come Visit Us Today</h2>
           <p className="text-earth-200 text-lg mb-8 max-w-xl mx-auto">
-            Step into our nursery farm and let our team help you find the perfect plant. Open 6 days a week.
+            Step into our nursery farm in Thoothukudi and let our team help you find the perfect plant. Open 6 days a week. Wholesale orders welcome.
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <Link href="/contact" className="btn-primary bg-white text-earth-700 hover:bg-earth-50 px-8 py-4 text-base">Contact Us</Link>

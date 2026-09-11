@@ -1,14 +1,29 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import {
   Sprout, GraduationCap, Truck, Recycle,
   LayoutDashboard, Scissors, Flower2, Droplets, Sun, Layers,
-  Check, Calendar, Users, UserCheck,
+  Check, Calendar, Users, UserCheck, MapPin,
 } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "RR Nursery and Landscaping Thoothukudi | Nursery & Landscaping Services in South Tamil Nadu",
+  description:
+    "RR Nursery and Landscaping — Thoothukudi's trusted plant nursery and landscape design company. Premium plants, expert landscaping, and garden services across South Tamil Nadu. Serving Thoothukudi, Tirunelveli, Nagercoil & more.",
+  keywords: [
+    "nursery and landscaping services in Thoothukudi",
+    "plant nursery near me",
+    "landscape design South Tamil Nadu",
+    "nursery farm Thoothukudi",
+    "garden plants Tirunelveli",
+  ],
+  alternates: { canonical: "https://www.rrnursery.in" },
+};
 
 const features = [
   { icon: Sprout,        title: "Wide Plant Selection",   desc: "Over 500 varieties of indoor and outdoor plants carefully sourced from top growers." },
   { icon: GraduationCap, title: "Expert Advice",          desc: "Our certified horticulturists are always ready to guide you to the perfect plant." },
-  { icon: Truck,         title: "Delivery & Planting",    desc: "We deliver and plant across the region — sit back and watch your garden transform." },
+  { icon: Truck,         title: "Delivery & Planting",    desc: "We deliver and plant across South Tamil Nadu — sit back and watch your garden transform." },
   { icon: Recycle,       title: "Sustainable Practices",  desc: "Eco-friendly growing methods and organic fertilizers for a healthier planet." },
 ];
 
@@ -24,8 +39,8 @@ const services = [
 const aboutPoints = [
   "Certified master gardeners on staff",
   "Sustainable and organic growing methods",
-  "Trusted by 5,000+ happy customers",
-  "Community garden initiatives",
+  "Trusted by thousands of happy customers",
+  "Community garden initiatives in South Tamil Nadu",
 ];
 
 const stats = [
@@ -36,9 +51,18 @@ const stats = [
 ];
 
 const testimonials = [
-  { name: "Priya M.",  text: "RR Nursery transformed our bare backyard into a lush paradise. The team was professional, creative, and delivered beyond expectations!", rating: 5 },
-  { name: "James T.",  text: "Incredible selection of plants and the staff really knows their stuff. I always leave with exactly what I need.", rating: 5 },
-  { name: "Anita K.",  text: "Gorgeous plants at fair prices. The delivery and planting service saved us so much time. Highly recommend!", rating: 5 },
+  { name: "Priya M., Thoothukudi",  text: "RR Nursery transformed our bare backyard into a lush paradise. The team was professional, creative, and delivered beyond expectations!", rating: 5 },
+  { name: "James T., Tirunelveli",  text: "Incredible selection of plants and the staff really knows their stuff. I always leave with exactly what I need.", rating: 5 },
+  { name: "Anita K., Nagercoil",    text: "Gorgeous plants at fair prices. The delivery and planting service saved us so much time. Highly recommend!", rating: 5 },
+];
+
+const serviceAreas = [
+  { city: "Thoothukudi", desc: "Our home city — full nursery & landscaping services" },
+  { city: "Tirunelveli", desc: "Landscape design & plant delivery available" },
+  { city: "Nagercoil",   desc: "Ornamental plants & garden design services" },
+  { city: "Kanyakumari", desc: "Coastal garden specialists & plant supply" },
+  { city: "Virudhunagar", desc: "Wholesale plant supply & landscaping" },
+  { city: "Kovilpatti",  desc: "Nursery plants & garden consultations" },
 ];
 
 export default function HomePage() {
@@ -49,14 +73,14 @@ export default function HomePage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-36">
           <div className="max-w-3xl">
             <p className="text-forest-300 font-medium mb-4 tracking-wide uppercase text-sm">
-              Welcome to RR Nursery
+              Thoothukudi, Tamil Nadu
             </p>
             <h1 className="text-4xl md:text-6xl font-display font-bold leading-tight mb-6">
-              Grow Something <br />
-              <span className="text-forest-300">Beautiful Today</span>
+              Nursery &amp; Landscaping <br />
+              <span className="text-forest-300">Services in Thoothukudi</span>
             </h1>
             <p className="text-forest-100 text-lg md:text-xl leading-relaxed mb-10 max-w-xl">
-              Your one-stop destination for premium plants, expert landscaping, and everything you need to create the garden of your dreams.
+              South Tamil Nadu&apos;s trusted destination for premium plants, professional landscape design, and everything you need to create the garden of your dreams.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/services" className="btn-primary bg-white text-forest-800 hover:bg-forest-50 shadow-lg">
@@ -94,7 +118,7 @@ export default function HomePage() {
         <div className="text-center mb-12">
           <h2 className="section-heading">Our Services</h2>
           <p className="section-subheading">
-            From a single potted plant to a complete garden makeover — we have got you covered.
+            From a single potted plant to a complete garden makeover — we have got you covered across South Tamil Nadu.
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -126,9 +150,9 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <p className="text-forest-600 font-medium uppercase tracking-wide text-sm mb-3">Our Story</p>
-              <h2 className="section-heading text-left">20+ Years of Nurturing Nature</h2>
+              <h2 className="section-heading text-left">20+ Years of Nurturing Nature in South Tamil Nadu</h2>
               <p className="text-gray-600 leading-relaxed mb-6">
-                Founded in 2005, RR Nursery has grown from a small family-run plant shop into the region's most trusted full-service nursery and landscaping company. We combine deep horticultural expertise with genuine passion for the environment.
+                RR Nursery and Landscaping has grown from a small family-run plant shop in Thoothukudi into South Tamil Nadu&apos;s most trusted full-service nursery and landscaping company. We combine deep horticultural expertise with genuine passion for the environment.
               </p>
               <ul className="space-y-3 mb-8">
                 {aboutPoints.map((pt) => (
@@ -161,7 +185,7 @@ export default function HomePage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center mb-12">
           <h2 className="section-heading">What Our Customers Say</h2>
-          <p className="section-subheading">Real reviews from real plant lovers.</p>
+          <p className="section-subheading">Real reviews from customers across South Tamil Nadu.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {testimonials.map((t) => (
@@ -178,6 +202,34 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Service Areas */}
+      <section className="bg-forest-900 text-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
+              Serving All of South Tamil Nadu
+            </h2>
+            <p className="text-forest-300 max-w-2xl mx-auto text-lg">
+              Looking for <strong className="text-white">nursery and landscaping services near you</strong>? We serve customers across South Tamil Nadu — from Thoothukudi to Kanyakumari.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {serviceAreas.map((area) => (
+              <div key={area.city} className="flex items-start gap-3 bg-forest-800 rounded-xl p-4 border border-forest-700">
+                <MapPin className="w-5 h-5 text-forest-400 shrink-0 mt-0.5" />
+                <div>
+                  <p className="font-semibold text-white">{area.city}</p>
+                  <p className="text-forest-400 text-sm">{area.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <p className="text-center text-forest-400 text-sm mt-8">
+            Don&apos;t see your city? <Link href="/contact" className="text-forest-300 hover:text-white underline">Contact us</Link> — we may still be able to serve you.
+          </p>
+        </div>
+      </section>
+
       {/* CTA Banner */}
       <section className="bg-forest-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
@@ -185,7 +237,7 @@ export default function HomePage() {
             Ready to Transform Your Space?
           </h2>
           <p className="text-forest-200 text-lg mb-8 max-w-xl mx-auto">
-            Contact us today for a free consultation and let our experts design the perfect garden for you.
+            Contact RR Nursery and Landscaping today for a free consultation and let our experts design the perfect garden for you.
           </p>
           <Link href="/contact" className="btn-primary bg-white text-forest-800 hover:bg-forest-50 text-base px-8 py-4">
             Get Your Free Quote
