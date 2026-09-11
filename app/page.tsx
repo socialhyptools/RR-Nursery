@@ -1,9 +1,10 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 import {
   Sprout, GraduationCap, Truck, Recycle,
   Shovel, Flower2, Droplets, Wrench, Scissors, ShoppingBag,
-  Check, Calendar, Users, UserCheck, MapPin, Star,
+  Check, Calendar, Users, UserCheck, MapPin, Star, Images,
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -70,25 +71,49 @@ export default function HomePage() {
     <>
       {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-to-br from-forest-900 via-forest-800 to-forest-700 text-white">
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-36">
-          <div className="max-w-3xl">
-            <p className="text-forest-300 font-medium mb-4 tracking-wide uppercase text-sm">
-              Thoothukudi, Tamil Nadu
-            </p>
-            <h1 className="text-4xl md:text-6xl font-display font-bold leading-tight mb-6">
-              Nursery &amp; Landscaping <br />
-              <span className="text-forest-300">Services in Thoothukudi</span>
-            </h1>
-            <p className="text-forest-100 text-lg md:text-xl leading-relaxed mb-10 max-w-xl">
-              South Tamil Nadu&apos;s trusted destination for premium plants, professional landscape design, hardscape, garden maintenance, and everything you need to create the garden of your dreams.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Link href="/services" className="btn-primary bg-white text-forest-800 hover:bg-forest-50 shadow-lg">
-                Explore Services
-              </Link>
-              <Link href="/contact" className="btn-outline border-white text-white hover:bg-white hover:text-forest-800">
-                Get a Free Quote
-              </Link>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left: text */}
+            <div>
+              <p className="text-forest-300 font-medium mb-4 tracking-wide uppercase text-sm">
+                Thoothukudi, Tamil Nadu
+              </p>
+              <h1 className="text-4xl md:text-5xl font-display font-bold leading-tight mb-6">
+                Nursery &amp; Landscaping <br />
+                <span className="text-forest-300">Services in Thoothukudi</span>
+              </h1>
+              <p className="text-forest-100 text-lg leading-relaxed mb-10">
+                South Tamil Nadu&apos;s trusted destination for premium plants, professional landscape design, hardscape, garden maintenance, and everything you need to create the garden of your dreams.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Link href="/services" className="btn-primary bg-white text-forest-800 hover:bg-forest-50 shadow-lg">
+                  Explore Services
+                </Link>
+                <Link href="/contact" className="btn-outline border-white text-white hover:bg-white hover:text-forest-800">
+                  Get a Free Quote
+                </Link>
+              </div>
+            </div>
+            {/* Right: nursery photo */}
+            <div className="hidden lg:block relative">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white/20">
+                <Image
+                  src="/gallery/nursery-shop-1.jpg"
+                  alt="RR Nursery and Landscaping — Thoothukudi shop front"
+                  width={600}
+                  height={450}
+                  className="w-full h-80 object-cover"
+                  priority
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-forest-900/80 to-transparent p-4">
+                  <p className="text-white text-sm font-medium">RR Nursery &amp; Landscaping, Thoothukudi</p>
+                </div>
+              </div>
+              {/* Floating badge */}
+              <div className="absolute -bottom-4 -left-4 bg-white rounded-xl shadow-lg px-4 py-3 text-center">
+                <div className="text-forest-700 font-bold text-xl">20+</div>
+                <div className="text-gray-600 text-xs">Years of Trust</div>
+              </div>
             </div>
           </div>
         </div>
@@ -231,6 +256,43 @@ export default function HomePage() {
             </Link>{" "}
             — we may still be able to serve you.
           </p>
+        </div>
+      </section>
+
+      {/* Gallery Preview */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="text-center mb-10">
+          <h2 className="section-heading">Our Nursery in Photos</h2>
+          <p className="section-subheading">
+            Take a look inside RR Nursery and Landscaping — plants, landscaping projects, and more from our Thoothukudi nursery.
+          </p>
+        </div>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+          {[
+            { src: "/gallery/nursery-shop-1.jpg", alt: "RR Nursery shop front, Thoothukudi" },
+            { src: "/gallery/gallery-2.jpg", alt: "Plants at RR Nursery" },
+            { src: "/gallery/gallery-3.jpg", alt: "Landscaping work by RR Nursery" },
+            { src: "/gallery/gallery-4.jpg", alt: "Garden plants nursery Thoothukudi" },
+            { src: "/gallery/gallery-5.jpg", alt: "Ornamental plants RR Nursery" },
+            { src: "/gallery/gallery-6.jpg", alt: "Nursery farm Thoothukudi" },
+            { src: "/gallery/gallery-7.jpg", alt: "Garden design South Tamil Nadu" },
+            { src: "/gallery/gallery-8.jpg", alt: "Plant collection RR Nursery" },
+          ].map((img, i) => (
+            <div key={i} className="relative overflow-hidden rounded-xl aspect-square bg-forest-50 group">
+              <Image
+                src={img.src}
+                alt={img.alt}
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+          ))}
+        </div>
+        <div className="text-center mt-8">
+          <Link href="/gallery" className="btn-outline inline-flex items-center gap-2">
+            <Images className="w-4 h-4" />
+            View Full Gallery
+          </Link>
         </div>
       </section>
 

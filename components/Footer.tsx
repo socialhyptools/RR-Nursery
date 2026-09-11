@@ -10,13 +10,15 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <Link href="/" className="inline-block mb-4">
-              <Image
-                src="/logo.jpeg"
-                alt="RR Nursery and Landscaping — Thoothukudi"
-                width={160}
-                height={54}
-                className="h-12 w-auto object-contain brightness-0 invert"
-              />
+              <div className="bg-white rounded-lg px-2 py-1 inline-block">
+                <Image
+                  src="/logo.jpeg"
+                  alt="RR Nursery and Landscaping — Thoothukudi"
+                  width={180}
+                  height={60}
+                  className="h-14 w-auto object-contain"
+                />
+              </div>
             </Link>
             <p className="text-forest-300 text-sm leading-relaxed">
               Thoothukudi&apos;s trusted nursery and landscaping company. Premium plants, expert landscape design, and garden services across South Tamil Nadu since 2005.
@@ -41,6 +43,7 @@ export default function Footer() {
                 { href: "/services/landscape-design", label: "Landscape Design" },
                 { href: "/services/nursery", label: "Plant Nursery" },
                 { href: "/about", label: "About Us" },
+                { href: "/gallery", label: "Gallery" },
                 { href: "/contact", label: "Contact" },
               ].map((link) => (
                 <li key={link.href}>
@@ -77,14 +80,14 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2.5">
                 <Clock className="w-4 h-4 shrink-0 text-forest-400" />
-                <span>Mon–Sat: 8 AM – 6 PM</span>
+                <span>Mon&ndash;Sat: 8 AM &ndash; 6 PM</span>
               </li>
             </ul>
           </div>
         </div>
 
         <div className="mt-10 pt-6 border-t border-forest-800 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-forest-400">
-          <p>© {new Date().getFullYear()} RR Nursery and Landscaping, Thoothukudi. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} RR Nursery and Landscaping, Thoothukudi. All rights reserved.</p>
           <div className="flex gap-4">
             <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link href="#" className="hover:text-white transition-colors">Terms of Service</Link>
