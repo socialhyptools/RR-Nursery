@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import {
   Flower2, TreeDeciduous, Flower, TreePine, Leaf, FlaskConical,
   GraduationCap, ShieldCheck, Truck, Recycle,
-  MapPin, Clock, Phone, Star, ChevronLeft, Facebook, Instagram, Twitter,
+  MapPin, Clock, Phone, Star, ChevronLeft,
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -35,14 +35,14 @@ const localBusinessJsonLd = {
   alternateName: "RR Nursery",
   image: "",
   url: "https://www.rrnursery.in/services/nursery",
-  telephone: "+91-[YOUR-PHONE]",
+  telephone: "+91-8124050535",
   priceRange: "₹₹",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "[Your Street Address]",
+    streetAddress: "12/582-6, Madhanager, Davis Puram",
     addressLocality: "Thoothukudi",
     addressRegion: "Tamil Nadu",
-    postalCode: "628001",
+    postalCode: "628002",
     addressCountry: "IN",
   },
   geo: { "@type": "GeoCoordinates", latitude: 8.7642, longitude: 78.1348 },
@@ -86,9 +86,9 @@ const trustStats = [
 ];
 
 const contactDetails = [
-  { icon: MapPin, label: "Address",       lines: ["[Your Street Address]", "Thoothukudi, Tamil Nadu 628001", "India"] },
+  { icon: MapPin, label: "Address",       lines: ["12/582-6, Madhanager, Davis Puram", "Thoothukudi, Tamil Nadu 628002", "India"] },
   { icon: Clock,  label: "Opening Hours", lines: ["Mon – Fri: 8:00 AM – 6:00 PM", "Saturday: 9:00 AM – 4:00 PM", "Sunday: Closed"] },
-  { icon: Phone,  label: "Phone",         lines: ["+91-[YOUR-PHONE]"] },
+  { icon: Phone,  label: "Phone",         lines: ["+91 81240 50535"] },
   { icon: Truck,  label: "Delivery Area", lines: ["Thoothukudi · Tirunelveli · Nagercoil", "Kanyakumari · Virudhunagar · Kovilpatti"] },
 ];
 
@@ -98,9 +98,8 @@ const reviews = [
 ];
 
 const socialLinks = [
-  { icon: Facebook,  label: "Facebook" },
-  { icon: Instagram, label: "Instagram" },
-  { icon: Twitter,   label: "Twitter" },
+  { label: "Facebook" },
+  { label: "Instagram" },
 ];
 
 const localKeywords = [
@@ -134,9 +133,9 @@ export default function NurseryShopPage() {
             </p>
             <div className="flex flex-wrap gap-3 text-sm mb-10">
               {[
-                { icon: MapPin, text: "Thoothukudi, Tamil Nadu" },
+                { icon: MapPin, text: "Davis Puram, Thoothukudi, TN 628002" },
                 { icon: Clock,  text: "Mon–Fri 8 AM–6 PM · Sat 9 AM–4 PM" },
-                { icon: Phone,  text: "+91-[YOUR-PHONE]" },
+                { icon: Phone,  text: "+91 81240 50535" },
               ].map(({ icon: Icon, text }) => (
                 <span key={text} className="flex items-center gap-1.5 bg-white/10 backdrop-blur px-4 py-2 rounded-full">
                   <Icon className="w-4 h-4" /> {text}
@@ -221,7 +220,7 @@ export default function NurseryShopPage() {
           <div>
             <h2 className="text-2xl md:text-3xl font-display font-bold text-gray-900 mb-2">Visit Our Nursery in Thoothukudi</h2>
             <p className="text-gray-600 mb-6 leading-relaxed">
-              Located in Thoothukudi, Tamil Nadu, RR Nursery and Landscaping is your neighbourhood plant destination. Whether you are looking for ornamental plants, wholesale nursery plants for a landscaping project, or expert gardening advice — we are here to help.
+              Located at Davis Puram, Thoothukudi, Tamil Nadu — RR Nursery and Landscaping is your neighbourhood plant destination. Whether you are looking for ornamental plants, wholesale nursery plants for a landscaping project, pots &amp; accessories, or expert gardening advice — we are here to help.
             </p>
             <div className="space-y-4 mb-8">
               {contactDetails.map((cd) => (
@@ -311,10 +310,10 @@ export default function NurseryShopPage() {
             <Link href="/services/landscape-design" className="btn-outline border-white text-white hover:bg-white hover:text-earth-700 px-8 py-4 text-base">Landscape Design Services</Link>
           </div>
           <div className="flex justify-center gap-4">
-            {socialLinks.map(({ icon: Icon, label }) => (
-              <button key={label} aria-label={label} className="w-10 h-10 bg-earth-600 hover:bg-earth-500 rounded-lg flex items-center justify-center transition-colors">
-                <Icon className="w-5 h-5 text-white" />
-              </button>
+            {socialLinks.map(({ label }) => (
+              <a key={label} href="#" aria-label={label} className="text-xs bg-earth-600 hover:bg-earth-500 text-white px-4 py-2 rounded-lg transition-colors font-medium">
+                {label}
+              </a>
             ))}
           </div>
         </div>

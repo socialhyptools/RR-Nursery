@@ -2,14 +2,14 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import {
   Sprout, GraduationCap, Truck, Recycle,
-  LayoutDashboard, Scissors, Flower2, Droplets, Sun, Layers,
-  Check, Calendar, Users, UserCheck, MapPin,
+  Shovel, Flower2, Droplets, Wrench, Scissors, ShoppingBag,
+  Check, Calendar, Users, UserCheck, MapPin, Star,
 } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "RR Nursery and Landscaping Thoothukudi | Nursery & Landscaping Services in South Tamil Nadu",
   description:
-    "RR Nursery and Landscaping — Thoothukudi's trusted plant nursery and landscape design company. Premium plants, expert landscaping, and garden services across South Tamil Nadu. Serving Thoothukudi, Tirunelveli, Nagercoil & more.",
+    "RR Nursery and Landscaping — Thoothukudi's trusted plant nursery and landscape design company. Premium plants, expert landscaping, pots & accessories, hardscape, and garden maintenance across South Tamil Nadu.",
   keywords: [
     "nursery and landscaping services in Thoothukudi",
     "plant nursery near me",
@@ -21,26 +21,26 @@ export const metadata: Metadata = {
 };
 
 const features = [
-  { icon: Sprout,        title: "Wide Plant Selection",   desc: "Over 500 varieties of indoor and outdoor plants carefully sourced from top growers." },
-  { icon: GraduationCap, title: "Expert Advice",          desc: "Our certified horticulturists are always ready to guide you to the perfect plant." },
-  { icon: Truck,         title: "Delivery & Planting",    desc: "We deliver and plant across South Tamil Nadu — sit back and watch your garden transform." },
-  { icon: Recycle,       title: "Sustainable Practices",  desc: "Eco-friendly growing methods and organic fertilizers for a healthier planet." },
+  { icon: Sprout,        title: "500+ Plant Varieties",     desc: "Indoor plants, outdoor plants, ornamental plants, and rare species — all quality-checked." },
+  { icon: GraduationCap, title: "Expert Advice",            desc: "Our certified horticulturists are on-site daily to help you choose the right plants." },
+  { icon: Truck,         title: "Delivery Across South TN", desc: "We deliver plants and garden materials to Thoothukudi, Tirunelveli, Nagercoil & beyond." },
+  { icon: Recycle,       title: "Sustainable Practices",    desc: "Eco-friendly growing, organic fertilisers, and responsible sourcing for a healthier planet." },
 ];
 
 const services = [
-  { icon: LayoutDashboard, title: "Landscape Design",      desc: "Custom garden plans tailored to your space, style, and budget." },
-  { icon: Scissors,        title: "Tree & Shrub Trimming", desc: "Professional pruning to keep your greenery healthy and looking its best." },
-  { icon: Flower2,         title: "Indoor Plant Styling",  desc: "Transform your interior spaces with curated plant arrangements." },
-  { icon: Droplets,        title: "Irrigation Systems",    desc: "Water-efficient irrigation installation and maintenance." },
-  { icon: Sun,             title: "Seasonal Planting",     desc: "Keep your garden vibrant year-round with seasonal planting services." },
-  { icon: Layers,          title: "Hardscaping",           desc: "Paths, patios, retaining walls, and more to complement your landscape." },
+  { icon: Shovel,      title: "Landscape Design & Architecture", desc: "Custom garden plans, 2D/3D renders, site analysis, and full project management across South Tamil Nadu." },
+  { icon: Flower2,     title: "Plants & Nursery Farm",           desc: "Browse 500+ varieties of ornamental plants, indoor plants, trees, herbs, and seasonal flowers." },
+  { icon: ShoppingBag, title: "Pots & Accessories",              desc: "Premium pots, planters, garden tools, organic soil, fertilisers, and all gardening accessories." },
+  { icon: Wrench,      title: "Hardscape",                       desc: "Patios, retaining walls, stone pathways, pergolas, and structural garden elements built to last." },
+  { icon: Scissors,    title: "Garden Maintenance",              desc: "Regular pruning, trimming, lawn care, and seasonal upkeep to keep your garden always looking its best." },
+  { icon: Droplets,    title: "Irrigation Systems",              desc: "Water-efficient drip irrigation and sprinkler systems designed for Tamil Nadu's climate." },
 ];
 
 const aboutPoints = [
-  "Certified master gardeners on staff",
+  "Certified horticulture professionals on staff",
   "Sustainable and organic growing methods",
-  "Trusted by thousands of happy customers",
-  "Community garden initiatives in South Tamil Nadu",
+  "Trusted by thousands of customers in South Tamil Nadu",
+  "Wholesale plant supply for landscaping companies",
 ];
 
 const stats = [
@@ -51,13 +51,13 @@ const stats = [
 ];
 
 const testimonials = [
-  { name: "Priya M., Thoothukudi",  text: "RR Nursery transformed our bare backyard into a lush paradise. The team was professional, creative, and delivered beyond expectations!", rating: 5 },
-  { name: "James T., Tirunelveli",  text: "Incredible selection of plants and the staff really knows their stuff. I always leave with exactly what I need.", rating: 5 },
-  { name: "Anita K., Nagercoil",    text: "Gorgeous plants at fair prices. The delivery and planting service saved us so much time. Highly recommend!", rating: 5 },
+  { name: "Murugan M., Thoothukudi", text: "Excellent plants and affordable prices. The team is very knowledgeable and the quality is outstanding!", rating: 5 },
+  { name: "Priya S., Tirunelveli",   text: "RR Nursery transformed our garden completely. Professional landscape design and great plant selection!", rating: 5 },
+  { name: "Anita K., Nagercoil",     text: "Best plant nursery near me in South Tamil Nadu. Great ornamental plants, pots, and accessories. Highly recommend!", rating: 5 },
 ];
 
 const serviceAreas = [
-  { city: "Thoothukudi", desc: "Our home city — full nursery & landscaping services" },
+  { city: "Thoothukudi", desc: "Our home city — full nursery, hardscape & landscaping" },
   { city: "Tirunelveli", desc: "Landscape design & plant delivery available" },
   { city: "Nagercoil",   desc: "Ornamental plants & garden design services" },
   { city: "Kanyakumari", desc: "Coastal garden specialists & plant supply" },
@@ -80,7 +80,7 @@ export default function HomePage() {
               <span className="text-forest-300">Services in Thoothukudi</span>
             </h1>
             <p className="text-forest-100 text-lg md:text-xl leading-relaxed mb-10 max-w-xl">
-              South Tamil Nadu&apos;s trusted destination for premium plants, professional landscape design, and everything you need to create the garden of your dreams.
+              South Tamil Nadu&apos;s trusted destination for premium plants, professional landscape design, hardscape, garden maintenance, and everything you need to create the garden of your dreams.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/services" className="btn-primary bg-white text-forest-800 hover:bg-forest-50 shadow-lg">
@@ -118,7 +118,7 @@ export default function HomePage() {
         <div className="text-center mb-12">
           <h2 className="section-heading">Our Services</h2>
           <p className="section-subheading">
-            From a single potted plant to a complete garden makeover — we have got you covered across South Tamil Nadu.
+            From a single potted plant to a complete landscape overhaul — we cover everything across South Tamil Nadu.
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -192,7 +192,7 @@ export default function HomePage() {
             <div key={t.name} className="bg-forest-50 rounded-2xl p-6 border border-forest-100">
               <div className="flex gap-1 mb-4">
                 {Array.from({ length: t.rating }).map((_, i) => (
-                  <span key={i} className="text-yellow-400 text-lg">★</span>
+                  <Star key={i} className="w-4 h-4 text-yellow-400 fill-yellow-400" />
                 ))}
               </div>
               <p className="text-gray-700 leading-relaxed mb-4 italic">&ldquo;{t.text}&rdquo;</p>
@@ -225,7 +225,11 @@ export default function HomePage() {
             ))}
           </div>
           <p className="text-center text-forest-400 text-sm mt-8">
-            Don&apos;t see your city? <Link href="/contact" className="text-forest-300 hover:text-white underline">Contact us</Link> — we may still be able to serve you.
+            Don&apos;t see your city?{" "}
+            <Link href="/contact" className="text-forest-300 hover:text-white underline">
+              Contact us
+            </Link>{" "}
+            — we may still be able to serve you.
           </p>
         </div>
       </section>
@@ -237,11 +241,16 @@ export default function HomePage() {
             Ready to Transform Your Space?
           </h2>
           <p className="text-forest-200 text-lg mb-8 max-w-xl mx-auto">
-            Contact RR Nursery and Landscaping today for a free consultation and let our experts design the perfect garden for you.
+            Contact RR Nursery and Landscaping today for a free consultation. Serving Thoothukudi and all of South Tamil Nadu.
           </p>
-          <Link href="/contact" className="btn-primary bg-white text-forest-800 hover:bg-forest-50 text-base px-8 py-4">
-            Get Your Free Quote
-          </Link>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link href="/contact" className="btn-primary bg-white text-forest-800 hover:bg-forest-50 text-base px-8 py-4">
+              Get Your Free Quote
+            </Link>
+            <a href="tel:+918124050535" className="btn-outline border-white text-white hover:bg-white hover:text-forest-800 text-base px-8 py-4">
+              Call +91 81240 50535
+            </a>
+          </div>
         </div>
       </section>
     </>

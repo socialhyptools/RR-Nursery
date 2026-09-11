@@ -69,20 +69,20 @@ const organizationJsonLd = {
   description:
     "Leading nursery and landscaping company in Thoothukudi, Tamil Nadu. Offering premium plants, landscape design, ornamental plants, and garden services across South Tamil Nadu.",
   url: siteUrl,
-  telephone: "+91-[YOUR-PHONE]",     // ← Replace with real phone
+  telephone: "+91-8124050535",
   priceRange: "₹₹",
-  image: `${siteUrl}/og-image.jpg`,
+  image: `${siteUrl}/logo.jpeg`,
   address: {
     "@type": "PostalAddress",
-    streetAddress: "[Your Street Address]", // ← Replace with real address
+    streetAddress: "12/582-6, Madhanager, Davis Puram",
     addressLocality: "Thoothukudi",
     addressRegion: "Tamil Nadu",
-    postalCode: "628001",
+    postalCode: "628002",
     addressCountry: "IN",
   },
   geo: {
     "@type": "GeoCoordinates",
-    latitude: 8.7642,   // ← Update from your GMB exact pin
+    latitude: 8.7642,
     longitude: 78.1348,
   },
   openingHoursSpecification: [

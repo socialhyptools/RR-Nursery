@@ -1,8 +1,9 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Sprout, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -20,13 +21,15 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-8 h-8 bg-forest-700 rounded-lg flex items-center justify-center group-hover:bg-forest-600 transition-colors">
-              <Sprout className="w-5 h-5 text-white" />
-            </div>
-            <span className="font-display font-bold text-xl text-forest-800 group-hover:text-forest-600 transition-colors">
-              RR Nursery
-            </span>
+          <Link href="/" className="flex items-center group">
+            <Image
+              src="/logo.jpeg"
+              alt="RR Nursery and Landscaping"
+              width={150}
+              height={50}
+              className="h-11 w-auto object-contain"
+              priority
+            />
           </Link>
 
           {/* Desktop nav */}

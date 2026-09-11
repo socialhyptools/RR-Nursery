@@ -1,25 +1,32 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { Shovel, Store, Check } from "lucide-react";
+import { Shovel, Store, Check, Phone, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Our Services | RR Nursery",
+  title: "Services | RR Nursery and Landscaping Thoothukudi — Landscape Design & Nursery Tamil Nadu",
   description:
-    "RR Nursery offers professional landscape designing & architecture and a full-service nursery plant shop. Explore our two specialisations.",
+    "RR Nursery and Landscaping, Thoothukudi — professional landscape designing & architecture and nursery plant shop. Serving South Tamil Nadu with premium plants, hardscape, pots, and garden maintenance.",
+  keywords: [
+    "nursery and landscaping services Thoothukudi",
+    "landscape design South Tamil Nadu",
+    "plant nursery near me",
+    "garden services Thoothukudi",
+  ],
+  alternates: { canonical: "https://www.rrnursery.in/services" },
 };
 
 const landscapePoints = [
-  "Custom landscape plans",
+  "Custom landscape plans for residential & commercial",
   "2D & 3D design rendering",
-  "Hardscaping & water features",
-  "Project management end-to-end",
+  "Hardscaping — patios, retaining walls, paths",
+  "Full project management end-to-end",
 ];
 
 const nurseryPoints = [
-  "500+ plant varieties in stock",
-  "Indoor & outdoor plants",
-  "Organic fertilisers & soil",
-  "Local delivery available",
+  "500+ plant varieties — ornamental, indoor, outdoor",
+  "Wholesale nursery plants for landscaping projects",
+  "Pots, accessories & organic fertilisers",
+  "Delivery across South Tamil Nadu",
 ];
 
 export default function ServicesHubPage() {
@@ -29,11 +36,11 @@ export default function ServicesHubPage() {
       <section className="bg-gradient-to-br from-forest-800 to-forest-700 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-forest-300 font-medium uppercase tracking-wide text-sm mb-3">
-            What We Do
+            Thoothukudi, Tamil Nadu
           </p>
           <h1 className="text-4xl md:text-5xl font-display font-bold mb-5">Our Services</h1>
           <p className="text-forest-100 text-lg max-w-2xl mx-auto">
-            Two distinct specialisations — one shared passion for nature. Choose the service that fits your needs.
+            Two distinct specialisations — one shared passion for nature. RR Nursery and Landscaping serves all of South Tamil Nadu with premium plants and professional landscape design.
           </p>
         </div>
       </section>
@@ -54,7 +61,7 @@ export default function ServicesHubPage() {
               Landscape Designing &amp; Architecture
             </h2>
             <p className="text-forest-200 leading-relaxed mb-8 flex-1">
-              Custom garden blueprints, site analysis, 2D/3D plans, hardscaping, and full project management — turning your outdoor space into a masterpiece.
+              Professional landscape architects in Thoothukudi — custom garden blueprints, site analysis, 2D/3D plans, hardscaping, water features, and full project management for residential and commercial clients across South Tamil Nadu.
             </p>
             <ul className="space-y-2 text-sm text-forest-300 mb-8">
               {landscapePoints.map((pt) => (
@@ -65,8 +72,8 @@ export default function ServicesHubPage() {
               ))}
             </ul>
             <div className="inline-flex items-center gap-2 bg-white text-forest-800 font-semibold px-6 py-3 rounded-xl w-fit group-hover:bg-forest-50 transition-colors">
-              Explore Service
-              <span className="group-hover:translate-x-1 transition-transform">→</span>
+              Explore Landscape Services
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </div>
           </Link>
 
@@ -82,7 +89,7 @@ export default function ServicesHubPage() {
               Nursery Farm &amp; Plant Shop
             </h2>
             <p className="text-earth-100 leading-relaxed mb-8 flex-1">
-              Visit our nursery farm and offline plant shop for 500+ varieties of indoor and outdoor plants, expert advice, and same-day local delivery.
+              Your local plant nursery in Thoothukudi. Visit our nursery farm for 500+ varieties of ornamental plants, indoor plants, trees, herbs, pots &amp; accessories — with wholesale supply available for landscaping contractors across South Tamil Nadu.
             </p>
             <ul className="space-y-2 text-sm text-earth-200 mb-8">
               {nurseryPoints.map((pt) => (
@@ -93,8 +100,8 @@ export default function ServicesHubPage() {
               ))}
             </ul>
             <div className="inline-flex items-center gap-2 bg-white text-earth-700 font-semibold px-6 py-3 rounded-xl w-fit group-hover:bg-earth-50 transition-colors">
-              Visit Our Shop
-              <span className="group-hover:translate-x-1 transition-transform">→</span>
+              Visit Our Plant Shop
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </div>
           </Link>
         </div>
@@ -106,12 +113,17 @@ export default function ServicesHubPage() {
           <h2 className="text-2xl font-display font-bold text-gray-900 mb-3">
             Not sure which service you need?
           </h2>
-          <p className="text-gray-600 mb-6">
-            Our team is happy to guide you. Book a free no-obligation consultation today.
+          <p className="text-gray-600 mb-6 max-w-xl mx-auto">
+            Our team in Thoothukudi is happy to guide you. Book a free no-obligation consultation — we serve Thoothukudi, Tirunelveli, Nagercoil, Kanyakumari, and all of South Tamil Nadu.
           </p>
-          <Link href="/contact" className="btn-primary px-8 py-4 text-base">
-            Get a Free Quote
-          </Link>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link href="/contact" className="btn-primary px-8 py-4 text-base">
+              Get a Free Quote
+            </Link>
+            <a href="tel:+918124050535" className="btn-outline px-8 py-4 text-base flex items-center gap-2">
+              <Phone className="w-4 h-4" /> +91 81240 50535
+            </a>
+          </div>
         </div>
       </section>
     </>
