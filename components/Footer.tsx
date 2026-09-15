@@ -12,7 +12,7 @@ export default function Footer() {
             <Link href="/" className="inline-block mb-4">
               <div className="bg-white rounded-lg px-2 py-1 inline-block">
                 <Image
-                  src="/logo.jpeg"
+                  src="/logo.png"
                   alt="RR Nursery and Landscaping — Thoothukudi"
                   width={180}
                   height={60}
