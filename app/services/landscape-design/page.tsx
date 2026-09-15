@@ -99,6 +99,16 @@ const faqs = [
   },
 ];
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+
 const trustStats = [
   { value: "200+", label: "Projects Completed" },
   { value: "20+",  label: "Years Experience" },
@@ -111,6 +121,7 @@ const serviceLocations = ["Thoothukudi", "Tirunelveli", "Nagercoil", "Madurai", 
 export default function LandscapeDesignPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       {/* Hero */}
       <section className="bg-gradient-to-br from-forest-900 via-forest-800 to-forest-700 text-white py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

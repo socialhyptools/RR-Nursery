@@ -156,6 +156,16 @@ const faqs = [
   },
 ];
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+
 const localKeywords = [
   "Plant nursery near me",
   "Ornamental plants Thoothukudi",
@@ -168,6 +178,7 @@ export default function NurseryShopPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
       {/* Hero */}
       <section className="bg-gradient-to-br from-earth-700 via-earth-600 to-forest-700 text-white py-24">
