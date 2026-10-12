@@ -25,7 +25,7 @@ const contactDetails = [
   {
     icon: Phone,
     title: "Call Us",
-    lines: ["+91 81240 50535"],
+    lines: ["+91 81240 50535", "+91 82488 38992"],
     link: "tel:+918124050535",
     linkLabel: "Call Now",
   },
@@ -39,7 +39,7 @@ const contactDetails = [
   {
     icon: Clock,
     title: "Opening Hours",
-    lines: ["Mon–Fri: 8 AM – 6 PM", "Saturday: 9 AM – 4 PM", "Sunday: Closed"],
+    lines: ["Mon–Sun: 9 AM – 9 PM", "Open all 7 days"],
     link: null,
     linkLabel: null,
   },
@@ -202,12 +202,16 @@ export default function ContactPage() {
                   <a href="tel:+918124050535" className="hover:text-white transition-colors">+91 81240 50535</a>
                 </li>
                 <li className="flex items-center gap-2.5">
+                  <Phone className="w-4 h-4 shrink-0 text-forest-400" />
+                  <a href="tel:+918248838992" className="hover:text-white transition-colors">+91 82488 38992</a>
+                </li>
+                <li className="flex items-center gap-2.5">
                   <Mail className="w-4 h-4 shrink-0 text-forest-400" />
                   <a href="mailto:info@rrnursery.in" className="hover:text-white transition-colors">info@rrnursery.in</a>
                 </li>
                 <li className="flex items-center gap-2.5">
                   <Clock className="w-4 h-4 shrink-0 text-forest-400" />
-                  <span>Mon–Sat: 8 AM – 6 PM &nbsp;|&nbsp; Sun: Closed</span>
+                  <span>Mon–Sun: 9 AM – 9 PM</span>
                 </li>
               </ul>
               <div className="flex gap-3 mt-5">

@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 };
 
 const whyUs = [
-  { icon: Calendar,     title: "20+ Years of Local Experience", desc: "We know which plants grow best in local soil and heat — over two decades of trusted service in South Tamil Nadu." },
+  { icon: Calendar,     title: "10+ Years of Local Experience", desc: "We know which plants grow best in local soil and heat — over a decade of trusted service in South Tamil Nadu." },
   { icon: Shovel,       title: "Full Outdoor Services",         desc: "We handle soil work, plant choice, stone paths, and water systems — everything your outdoor space needs." },
   { icon: GraduationCap, title: "Trained Plant Experts",        desc: "Our team helps you pick the right soil, water schedules, and plant food for every variety we stock." },
   { icon: Recycle,      title: "Organic Growing Methods",       desc: "We use organic plant food, drip lines, and safe soil boosters — good for your garden and the environment." },
@@ -56,7 +56,7 @@ const aboutPoints = [
 ];
 
 const stats = [
-  { icon: Calendar,  value: "20+",  label: "Years Experience", bg: "bg-forest-700" },
+  { icon: Calendar,  value: "10+",  label: "Years Experience", bg: "bg-forest-700" },
   { icon: Sprout,    value: "500+", label: "Plant Varieties",  bg: "bg-earth-600" },
   { icon: Users,     value: "5K+",  label: "Happy Customers",  bg: "bg-earth-600" },
   { icon: UserCheck, value: "12",   label: "Expert Staff",     bg: "bg-forest-700" },
@@ -166,7 +166,7 @@ export default function HomePage() {
                 </div>
               </div>
               <div className="absolute -bottom-4 -left-4 bg-white rounded-xl shadow-lg px-4 py-3 text-center">
-                <div className="text-forest-700 font-bold text-xl">20+</div>
+                <div className="text-forest-700 font-bold text-xl">10+</div>
                 <div className="text-gray-600 text-xs">Years of Trust</div>
               </div>
             </div>
@@ -326,7 +326,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <p className="text-forest-300 font-medium uppercase tracking-wide text-sm mb-3">Our Story</p>
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-5">20+ Years of Nurturing Nature in South Tamil Nadu</h2>
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-5">10+ Years of Nurturing Nature in South Tamil Nadu</h2>
               <p className="text-forest-200 leading-relaxed mb-6">
                 RR Nursery and Landscaping has grown from a small family-run plant shop in Thoothukudi into South Tamil Nadu&apos;s most trusted full-service nursery and landscaping company. We combine deep horticultural expertise with genuine passion for the environment.
               </p>

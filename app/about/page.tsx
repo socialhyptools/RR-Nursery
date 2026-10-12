@@ -5,7 +5,7 @@ import { Globe, Users, Award, BookOpen, Calendar, Sprout, UserCheck } from "luci
 export const metadata: Metadata = {
   title: "About Us | RR Nursery and Landscaping Thoothukudi, Tamil Nadu",
   description:
-    "Learn about RR Nursery and Landscaping — Thoothukudi's trusted nursery and landscape design company. 20+ years serving South Tamil Nadu with premium plants, expert landscape architects, and sustainable horticulture.",
+    "Learn about RR Nursery and Landscaping — Thoothukudi's trusted nursery and landscape design company. 10+ years serving South Tamil Nadu with premium plants, expert landscape architects, and sustainable horticulture.",
   keywords: [
     "RR Nursery Thoothukudi",
     "nursery and landscaping South Tamil Nadu",
@@ -39,7 +39,7 @@ const milestones = [
 ];
 
 const stats = [
-  { icon: Calendar,  value: "20+",   label: "Years in Business" },
+  { icon: Calendar,  value: "10+",   label: "Years in Business" },
   { icon: Sprout,    value: "500+",  label: "Plant Varieties" },
   { icon: Users,     value: "5,000+", label: "Happy Customers" },
   { icon: UserCheck, value: "12",    label: "Expert Staff" },
@@ -54,7 +54,7 @@ export default function AboutPage() {
           <p className="text-forest-300 font-medium uppercase tracking-wide text-sm mb-3">Thoothukudi, Tamil Nadu</p>
           <h1 className="text-4xl md:text-5xl font-display font-bold mb-5">About RR Nursery and Landscaping</h1>
           <p className="text-forest-100 text-lg max-w-2xl mx-auto">
-            A family-founded, community-driven nursery and landscaping company with over two decades of passion for plants and sustainable living in South Tamil Nadu.
+            A family-founded, community-driven nursery and landscaping company with over a decade of passion for plants and sustainable living in South Tamil Nadu.
           </p>
         </div>
       </section>

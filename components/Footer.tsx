@@ -73,6 +73,12 @@ export default function Footer() {
                 </a>
               </li>
               <li className="flex items-center gap-2.5">
+                <Phone className="w-4 h-4 shrink-0 text-forest-400" />
+                <a href="tel:+918248838992" className="hover:text-white transition-colors">
+                  +91 82488 38992
+                </a>
+              </li>
+              <li className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 shrink-0 text-forest-400" />
                 <a href="mailto:info@rrnursery.in" className="hover:text-white transition-colors">
                   info@rrnursery.in
@@ -80,7 +86,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2.5">
                 <Clock className="w-4 h-4 shrink-0 text-forest-400" />
-                <span>Mon&ndash;Sat: 8 AM &ndash; 6 PM</span>
+                <span>Mon&ndash;Sun: 9 AM &ndash; 9 PM</span>
               </li>
             </ul>
           </div>

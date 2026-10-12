@@ -68,7 +68,7 @@ export default function GalleryPage() {
             Visit Our Nursery in Thoothukudi
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto mb-8">
-            See our full range of 500+ plants, pots, and landscaping work in person. Located at Davis Puram, Thoothukudi — open Mon–Sat, 8 AM to 6 PM.
+            See our full range of 500+ plants, pots, and landscaping work in person. Located at Davis Puram, Thoothukudi — open all 7 days, 9 AM to 9 PM.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a

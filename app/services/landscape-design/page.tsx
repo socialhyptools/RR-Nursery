@@ -83,7 +83,7 @@ const faqs = [
   },
   {
     q: "How do I choose the right landscaping company in Tamil Nadu?",
-    a: "Look for a company with local experience, an in-house team, and a portfolio of completed projects in the region. RR Nursery has 20+ years of experience in South Tamil Nadu, runs its own nursery farm, and handles design and construction under one roof — so you get consistent quality and accountability.",
+    a: "Look for a company with local experience, an in-house team, and a portfolio of completed projects in the region. RR Nursery has 10+ years of experience in South Tamil Nadu, runs its own nursery farm, and handles design and construction under one roof — so you get consistent quality and accountability.",
   },
   {
     q: "How long does a typical landscaping project take?",
@@ -111,7 +111,7 @@ const faqJsonLd = {
 
 const trustStats = [
   { value: "200+", label: "Projects Completed" },
-  { value: "20+",  label: "Years Experience" },
+  { value: "10+",  label: "Years Experience" },
   { value: "100%", label: "Client Satisfaction" },
   { value: "5★",   label: "Average Rating" },
 ];

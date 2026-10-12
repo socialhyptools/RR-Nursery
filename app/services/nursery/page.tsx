@@ -46,7 +46,7 @@ const localBusinessJsonLd = {
   },
   geo: { "@type": "GeoCoordinates", latitude: 8.7642, longitude: 78.1348 },
   openingHoursSpecification: [
-    { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], opens: "08:00", closes: "18:00" },
+    { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], opens: "09:00", closes: "21:00" },
   ],
   aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "150" },
   areaServed: [
@@ -123,7 +123,7 @@ const wholesaleClients = [
 
 const contactDetails = [
   { icon: MapPin, label: "Address",       lines: ["Davis Puram, Thoothukudi", "Tamil Nadu, India"] },
-  { icon: Clock,  label: "Opening Hours", lines: ["Mon – Sat: 8:00 AM – 6:00 PM", "Sunday: Closed"] },
+  { icon: Clock,  label: "Opening Hours", lines: ["Mon – Sun: 9:00 AM – 9:00 PM", "Open all 7 days"] },
   { icon: Phone,  label: "Phone",         lines: ["+91 81240 50535"] },
   { icon: Truck,  label: "Delivery Area", lines: ["Thoothukudi · Tirunelveli · Nagercoil", "Kanyakumari · Virudhunagar · Kovilpatti"] },
 ];
@@ -198,7 +198,7 @@ export default function NurseryShopPage() {
             <div className="flex flex-wrap gap-3 text-sm mb-10">
               {[
                 { icon: MapPin, text: "Davis Puram, Thoothukudi, TN 628002" },
-                { icon: Clock,  text: "Mon–Sat 8 AM – 6 PM" },
+                { icon: Clock,  text: "Mon–Sun 9 AM – 9 PM" },
                 { icon: Phone,  text: "+91 81240 50535" },
               ].map(({ icon: Icon, text }) => (
                 <span key={text} className="flex items-center gap-1.5 bg-white/10 backdrop-blur px-4 py-2 rounded-full">
