@@ -14,9 +14,9 @@ export default function Footer() {
                 <Image
                   src="/logo.png"
                   alt="RR Nursery and Landscaping — Thoothukudi"
-                  width={180}
-                  height={60}
-                  className="h-14 w-auto object-contain"
+                  width={962}
+                  height={232}
+                  className="h-12 w-auto object-contain"
                 />
               </div>
             </Link>

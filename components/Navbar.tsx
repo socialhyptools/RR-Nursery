@@ -30,9 +30,9 @@ export default function Navbar() {
             <Image
               src="/logo.png"
               alt="RR Nursery and Landscaping"
-              width={150}
-              height={50}
-              className="h-14 w-auto object-contain"
+              width={962}
+              height={232}
+              className="h-12 w-auto object-contain"
               priority
             />
           </Link>
