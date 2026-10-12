@@ -72,7 +72,7 @@ const organizationJsonLd = {
   url: siteUrl,
   telephone: "+91-8124050535",
   priceRange: "₹₹",
-  image: `${siteUrl}/logo.png`,
+  image: `${siteUrl}/rr-logo.png`,
   address: {
     "@type": "PostalAddress",
     streetAddress: "12/582-6, Madhanager, Davis Puram",
