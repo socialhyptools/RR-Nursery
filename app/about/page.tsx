@@ -15,11 +15,40 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://www.rrnursery.in/about" },
 };
 
-const team = [
-  { initials: "RR", name: "Rajesh R.",   role: "Founder & Master Horticulturist", bio: "With over 25 years in horticulture, Rajesh founded RR Nursery and Landscaping with a vision to make quality plants and professional landscaping accessible to everyone in Thoothukudi and South Tamil Nadu.", color: "bg-forest-700" },
-  { initials: "RR", name: "Rekha R.",    role: "Co-Founder & Head of Design",     bio: "Rekha brings an artist's eye to every landscape design. She leads our creative team and personally oversees all major design projects across Tamil Nadu.",              color: "bg-earth-600" },
-  { initials: "AK", name: "Arun Kumar", role: "Lead Landscape Architect",         bio: "A certified landscape architect with a decade of experience, Arun specializes in sustainable design and water-efficient garden systems suited to South Tamil Nadu's climate.",               color: "bg-forest-600" },
-  { initials: "DS", name: "Divya S.",   role: "Plant Health Specialist",          bio: "Divya is our resident plant doctor. She diagnoses, treats, and nurtures plants back to health using organic, eco-friendly methods.",                   color: "bg-earth-700" },
+const founders = [
+  {
+    initials: "A",
+    label: "About the Founder",
+    name: "Arbutharobert",
+    qualification: "B.Sc. Agri & MBA",
+    roles: ["Founder – RR Nursery and Landscaping", "Founder – GreenSky Landscape, Chennai"],
+    bio: [
+      "Arbutharobert is a B.Sc. Agriculture and MBA graduate with 12 years of experience in the landscaping industry. As the Founder of GreenSky Landscape, Chennai, he has successfully led the company for over 6 years, delivering approximately 700 landscaping projects.",
+      "With expertise in landscape design, execution, and maintenance, he is committed to transforming outdoor spaces into beautiful, functional, and sustainable green environments through innovative designs and quality-driven solutions.",
+    ],
+    highlights: [
+      { value: "12", label: "Years in Landscaping" },
+      { value: "700+", label: "Projects Delivered" },
+      { value: "6+", label: "Years Leading GreenSky" },
+    ],
+    color: "bg-forest-700",
+  },
+  {
+    initials: "R",
+    label: "About the Co-founder",
+    name: "Raghul",
+    qualification: "B.E. Mechanical Engineering",
+    roles: ["Co-founder – RR Nursery and Landscaping", "Project Manager – GreenSky Landscape"],
+    bio: [
+      "A Mechanical Engineering graduate with nearly 5 years of experience in project management and team leadership, Raghul specializes in technical project coordination, engineering structures, automated irrigation, team management, and the execution of landscape and hardscape projects.",
+    ],
+    highlights: [
+      { value: "5", label: "Years in Project Management" },
+      { value: "B.E.", label: "Mechanical Engineer" },
+    ],
+    skills: ["Technical Project Coordination", "Engineering Structures", "Automated Irrigation", "Team Management", "Landscape & Hardscape Execution"],
+    color: "bg-earth-600",
+  },
 ];
 
 const values = [
@@ -66,7 +95,7 @@ export default function AboutPage() {
             <p className="text-forest-600 font-medium uppercase tracking-wide text-sm mb-3">Our Story</p>
             <h2 className="section-heading text-left">Rooted in Thoothukudi, Grown with Purpose</h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              RR Nursery and Landscaping began when husband-and-wife team Rajesh and Rekha decided to turn their lifelong love of gardening into a community resource in Thoothukudi. Starting with a small nursery farm and a big dream, they built the business one plant — and one customer — at a time.
+              RR Nursery and Landscaping was founded by Arbutharobert and Raghul, who bring together 12 years of landscaping industry experience and around 700 completed projects from GreenSky Landscape, Chennai. They started RR Nursery to bring that same design and execution expertise to Thoothukudi.
             </p>
             <p className="text-gray-600 leading-relaxed mb-4">
               Today, RR Nursery spans 2 acres and employs 12 passionate horticulture professionals. We are proud to serve Thoothukudi, Tirunelveli, Nagercoil, Kanyakumari, Virudhunagar, and all of South Tamil Nadu with premium plants and professional landscape design.
@@ -118,21 +147,51 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Team */}
+      {/* Founders */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center mb-12">
-          <h2 className="section-heading">Meet Our Team</h2>
-          <p className="section-subheading">The passionate people behind every beautiful garden we create in South Tamil Nadu.</p>
+          <h2 className="section-heading">Meet the Founders</h2>
+          <p className="section-subheading">The people behind every beautiful garden we create in South Tamil Nadu.</p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {team.map((member) => (
-            <div key={member.name} className="bg-white border border-gray-100 rounded-2xl p-6 text-center hover:border-forest-300 hover:shadow-lg transition-all duration-300">
-              <div className={`w-20 h-20 rounded-full ${member.color} text-white flex items-center justify-center text-xl font-display font-bold mx-auto mb-4`}>
-                {member.initials}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {founders.map((f) => (
+            <div key={f.name} className="bg-white border border-gray-100 rounded-2xl p-6 sm:p-8 hover:border-forest-300 hover:shadow-lg transition-all duration-300 flex flex-col">
+              <p className="text-forest-600 font-medium uppercase tracking-wide text-xs mb-4">{f.label}</p>
+              <div className="flex items-center gap-4 mb-5">
+                <div className={`w-16 h-16 rounded-full ${f.color} text-white flex items-center justify-center text-2xl font-display font-bold shrink-0`}>
+                  {f.initials}
+                </div>
+                <div>
+                  <h3 className="font-display font-bold text-gray-900 text-2xl">{f.name}</h3>
+                  <p className="text-earth-600 text-sm font-semibold">{f.qualification}</p>
+                </div>
               </div>
-              <h3 className="font-semibold text-gray-900 text-lg">{member.name}</h3>
-              <p className="text-forest-600 text-sm font-medium mb-3">{member.role}</p>
-              <p className="text-gray-600 text-sm leading-relaxed">{member.bio}</p>
+              <ul className="space-y-1 mb-5">
+                {f.roles.map((r) => (
+                  <li key={r} className="text-gray-800 text-sm font-medium flex items-start gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-forest-500 mt-1.5 shrink-0" />
+                    {r}
+                  </li>
+                ))}
+              </ul>
+              {f.bio.map((p) => (
+                <p key={p} className="text-gray-600 text-sm leading-relaxed mb-3">{p}</p>
+              ))}
+              {f.skills && (
+                <div className="flex flex-wrap gap-2 mt-1 mb-3">
+                  {f.skills.map((s) => (
+                    <span key={s} className="text-xs bg-forest-50 text-forest-700 border border-forest-100 px-3 py-1 rounded-full">{s}</span>
+                  ))}
+                </div>
+              )}
+              <div className="grid grid-cols-3 gap-3 mt-auto pt-5 border-t border-gray-100">
+                {f.highlights.map((h) => (
+                  <div key={h.label} className="text-center">
+                    <div className="text-2xl font-display font-bold text-forest-700">{h.value}</div>
+                    <div className="text-gray-500 text-xs leading-snug">{h.label}</div>
+                  </div>
+                ))}
+              </div>
             </div>
           ))}
         </div>
